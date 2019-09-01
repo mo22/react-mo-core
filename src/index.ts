@@ -1,4 +1,5 @@
-// @TODO: react-mo-core?
+import * as React from 'react';
+
 export function onWillUnmount(self: React.Component, callback: () => void) {
   const prev = self.componentWillUnmount ? self.componentWillUnmount.bind(self) : undefined;
   self.componentWillUnmount = () => {
@@ -24,6 +25,3 @@ export function SafeSetState<S>(self: React.Component<any, S>) {
     }
   };
 }
-
-
-
