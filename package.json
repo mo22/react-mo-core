@@ -1,6 +1,6 @@
 {
   "name": "react-mo-core",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "react tools",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -24,7 +24,9 @@
     "react": "^16.9.0",
     "typescript": "^3.6.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mo-core": "^0.1.1"
+  },
   "peerDependencies": {
     "react": "*"
   }

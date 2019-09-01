@@ -1,4 +1,7 @@
 import * as React from 'react';
+import { Releaseable } from 'mo-core';
+
+
 
 export function onWillUnmount(self: React.Component, callback: () => void) {
   const prev = self.componentWillUnmount ? self.componentWillUnmount.bind(self) : undefined;
@@ -8,12 +11,10 @@ export function onWillUnmount(self: React.Component, callback: () => void) {
   };
 }
 
-// @TODO: react-mo-core?
 export function releaseOnWillUnmount(self: React.Component, sub: Releaseable) {
   onWillUnmount(self, () => sub.release());
 }
 
-// @TODO: react-mo-core?
 export function SafeSetState<S>(self: React.Component<any, S>) {
   let mounted = true;
   onWillUnmount(self, () => {
