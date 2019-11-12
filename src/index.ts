@@ -16,7 +16,8 @@ export function onWillUnmount(self: React.Component, callback: () => void) {
 /**
  * release Releaseable `sub` if class `self` is unmounted
  */
-export function releaseOnWillUnmount(self: React.Component, sub: Releaseable) {
+export function releaseOnWillUnmount(self: React.Component, sub: Releaseable|undefined) {
+  if (sub === undefined) return;
   onWillUnmount(self, () => sub.release());
 }
 

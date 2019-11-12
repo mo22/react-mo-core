@@ -7,7 +7,7 @@ export declare function onWillUnmount(self: React.Component, callback: () => voi
 /**
  * release Releaseable `sub` if class `self` is unmounted
  */
-export declare function releaseOnWillUnmount(self: React.Component, sub: Releaseable): void;
+export declare function releaseOnWillUnmount(self: React.Component, sub: Releaseable | undefined): void;
 /**
  * provide a safe setState function that does nothing if unmounted
  * @example
